@@ -78,6 +78,8 @@
       $this->quote = $row['quote'];
       $this->author = $row['author'];
       $this->category = $row['category'];
+
+      return $stmt;
     }
 
     // Get Quotes (authorId and categoryId)
