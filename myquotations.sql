@@ -66,7 +66,7 @@ INSERT INTO `quotes` (`id`, `quote`, `authorId`, `categoryId`) VALUES
 (28, 'Holographic meatloaf? My favorite!', 13, 6),
 (29, 'Squidward… I used your clarinet to unclog my toilet!', 14, 6),
 (30, 'The Krusty Krab pizza is the pizza for you and me.', 14, 6),
-(31, 'Hey Patrick, I thought of something funnier than 24… 25!', 14, 6)
+(31, 'Hey Patrick, I thought of something funnier than 24… 25!', 14, 6),
 (32, 'Gun to my head? I''d say pull the trigger.', 5, 4);
 
 INSERT INTO `authors` (`id`, `author`) VALUES
