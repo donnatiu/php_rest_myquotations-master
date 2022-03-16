@@ -1,5 +1,7 @@
 <?php
 
+  include_once '../../function/isValid.php';
+
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 

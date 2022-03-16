@@ -24,7 +24,7 @@
   else {
     // No Authors
     echo json_encode(
-      array('message' => 'authorId not found')
+      array('message' => 'authorId Not Found')
     );
   }
 

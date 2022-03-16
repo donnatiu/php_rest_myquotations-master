@@ -24,7 +24,7 @@
   else {
     // No Categories
     echo json_encode(
-      array('message' => 'categoryId not found')
+      array('message' => 'categoryId Not Found')
     );
   }
 
