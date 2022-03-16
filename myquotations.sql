@@ -8,6 +8,21 @@ Create a database named “quotesdb” with 3 tables and these specific column n
 
 */
 
+/* (b) authors (id, author) */
+
+CREATE TABLE `authors` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+/* (c) categories (id, category) */
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
 /* (a) quotes (id, quote, authorId, categoryId) - the last two are foreign keys */
 CREATE TABLE `quotes` (
@@ -54,15 +69,6 @@ INSERT INTO `quotes` (`id`, `quote`, `authorId`, `categoryId`) VALUES
 (31, 'Hey Patrick, I thought of something funnier than 24… 25!', 14, 6)
 (32, 'Gun to my head? I''d say pull the trigger.', 5, 4);
 
-
-/* (b) authors (id, author) */
-
-CREATE TABLE `authors` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `author` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
 INSERT INTO `authors` (`id`, `author`) VALUES
 (1, 'Drake Parker'),
 (2, 'Josh Nichols'),
@@ -78,15 +84,6 @@ INSERT INTO `authors` (`id`, `author`) VALUES
 (12, 'Patrick Star'),
 (13, 'Sheldon J. Plankton'),
 (14, 'SpongeBob SquarePants');
-
-
-/* (c) categories (id, category) */
-
-CREATE TABLE `categories` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-);
 
 INSERT INTO `categories` (`id`, `category`) VALUES
 (1, 'Drake and Josh'),
