@@ -10,10 +10,11 @@
   if($num > 0) {
     // set properties
     $row = $result->fetch(PDO::FETCH_ASSOC);
-    $quote->id = $row['id'];
-    $quote->quote = $row['quote'];
-    $quote->author = $row['author'];
-    $quote->category = $row['category'];
+    extract($row);
+    $quote->id = $id;
+    $quote->quote = $quote;
+    $quote->author = $author;
+    $quote->category = $category;
 
     // Create array
     $quote_arr = array(
