@@ -1,6 +1,5 @@
 <?php
 
-
   // Get ID
   $quote->id = $_GET['id'];
 
@@ -22,7 +21,6 @@
 
     // Turn to JSON & output
     echo json_encode($quote_arr);
-
   } 
   
   else {

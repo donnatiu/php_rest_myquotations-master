@@ -15,18 +15,19 @@
   if($num > 0) {
     // Author array
     $author_arr = array();
-    $author_arr['data'] = array();
+    // $author_arr['data'] = array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
 
       $author_item = array(
-        'id' => $row->id,
-        'author' => $row->author
+        'id' => $id,
+        'author' => $author
       );
 
       // Push to "data"
-      array_push($author_arr['data'], $author_item);
+      array_push($author_arr, $author_item);
+      // array_push($author_arr['data'], $author_item);
     }
 
     // Turn to JSON & output

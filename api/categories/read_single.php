@@ -1,27 +1,24 @@
 <?php
 
+  // Get ID
+  $category->id = $_GET['id'];
+
   // Category read query
   $result = $category->read_single();
 
   // Get row count
   $num = $result->rowCount();
-
+  
   // Check if any categories
   if($num > 0) {
-    // set properties
-    $row = $result->fetch(PDO::FETCH_ASSOC);
-    $category->id = $row['id'];
-    $category->category = $row['category'];
-
     // Create array
     $category_arr = array(
       'id' => $category->id,
-      'category' => $category->category
+      'author' => $category->author
     );
 
     // Turn to JSON & output
     echo json_encode($category_arr);
-
   } 
   
   else {

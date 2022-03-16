@@ -1,18 +1,16 @@
 <?php
 
+  // Get ID
+  $author->id = $_GET['id'];
+
   // Author read query
-  $result = $category->read_single();
+  $result = $author->read_single();
 
   // Get row count
   $num = $result->rowCount();
 
   // Check if any authors
   if($num > 0) {
-    // set properties
-    $row = $result->fetch(PDO::FETCH_ASSOC);
-    $author->id = $row['id'];
-    $author->author = $row['category'];
-
     // Create array
     $author_arr = array(
       'id' => $author->id,
@@ -21,7 +19,6 @@
 
     // Turn to JSON & output
     echo json_encode($author_arr);
-
   } 
   
   else {
