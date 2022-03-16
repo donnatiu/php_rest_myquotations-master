@@ -35,6 +35,30 @@ CREATE TABLE `quotes` (
   FOREIGN KEY (`categoryId`) REFERENCES `categories`(`id`)
 );
 
+INSERT INTO `authors` (`id`, `author`) VALUES
+(1, 'Drake Parker'),
+(2, 'Josh Nichols'),
+(3, 'Jessica Huang'),
+(4, 'Chandler Bing'),
+(5, 'Mitchell Pritchett'),
+(6, 'Joey Tribbiani'),
+(7, 'Rachel Green'),
+(8, 'Ross Geller'),
+(9, 'Gloria Pritchett'),
+(10, 'Phil Duncan'),
+(11, 'Jean Ralphio'),
+(12, 'Patrick Star'),
+(13, 'Sheldon J. Plankton'),
+(14, 'SpongeBob SquarePants');
+
+INSERT INTO `categories` (`id`, `category`) VALUES
+(1, 'Drake and Josh'),
+(2, 'Fresh Off The Boat'),
+(3, 'Friends'),
+(4, 'Modern Family'),
+(5, 'Parks and Rec'),
+(6, 'SpongeBob SquarePants');
+
 INSERT INTO `quotes` (`id`, `quote`, `authorId`, `categoryId`) VALUES
 (1, 'Pip-Pip-Da-Doodalydoo.', 1, 1),
 (2, 'I ain''t calling you a truther!', 2, 1),
@@ -69,26 +93,3 @@ INSERT INTO `quotes` (`id`, `quote`, `authorId`, `categoryId`) VALUES
 (31, 'Hey Patrick, I thought of something funnier than 24… 25!', 14, 6),
 (32, 'Gun to my head? I''d say pull the trigger.', 5, 4);
 
-INSERT INTO `authors` (`id`, `author`) VALUES
-(1, 'Drake Parker'),
-(2, 'Josh Nichols'),
-(3, 'Jessica Huang'),
-(4, 'Chandler Bing'),
-(5, 'Mitchell Pritchett'),
-(6, 'Joey Tribbiani'),
-(7, 'Rachel Green'),
-(8, 'Ross Geller'),
-(9, 'Gloria Pritchett'),
-(10, 'Phil Duncan'),
-(11, 'Jean Ralphio'),
-(12, 'Patrick Star'),
-(13, 'Sheldon J. Plankton'),
-(14, 'SpongeBob SquarePants');
-
-INSERT INTO `categories` (`id`, `category`) VALUES
-(1, 'Drake and Josh'),
-(2, 'Fresh Off The Boat'),
-(3, 'Friends'),
-(4, 'Modern Family'),
-(5, 'Parks and Rec'),
-(6, 'SpongeBob SquarePants');
