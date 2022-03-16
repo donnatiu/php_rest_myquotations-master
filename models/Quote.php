@@ -116,6 +116,8 @@
       $this->quote = $row['quote'];
       $this->author = $row['author'];
       $this->category = $row['category'];
+
+      return $stmt;
     }
 
     // Get Quotes (authorId)
@@ -151,6 +153,8 @@
       $this->quote = $row['quote'];
       $this->author = $row['author'];
       $this->category = $row['category'];
+
+      return $stmt;
     }
 
     // Get Quotes (categoryId)
@@ -186,6 +190,8 @@
       $this->quote = $row['quote'];
       $this->author = $row['author'];
       $this->category = $row['category'];
+
+      return $stmt;
     }
 
     // Create Quote

@@ -8,16 +8,20 @@
 
   // All quotes from specified authorId & categoryId
   if(isset($_GET['authorId']) && isset($_GET['cateogryId'])) {
+    $quote->authorId = $_GET['authorId'];
+    $quote->categoryId = $_GET['categoryId'];
     $result = $quote->read_given_both();
   }
 
   // All quotes from specified authorId
   elseif(isset($_GET['authorId'])) {
+    $quote->authorId = $_GET['authorId'];
     $result = $quote->read_given_author();
   }
 
   // All quotes from specified categoryId
   elseif(isset($_GET['cateogryId'])) {
+    $quote->categoryId = $_GET['categoryId'];
     $result = $quote->read_given_category();
   }
 
