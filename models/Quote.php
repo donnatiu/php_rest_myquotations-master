@@ -109,14 +109,6 @@
       // Execute query
       $stmt->execute();
 
-      $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-      // Set properties
-      $this->id = $row['id'];
-      $this->quote = $row['quote'];
-      $this->author = $row['author'];
-      $this->category = $row['category'];
-
       return $stmt;
     }
 
@@ -146,14 +138,6 @@
       // Execute query
       $stmt->execute();
 
-      $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-      // Set properties
-      $this->id = $row['id'];
-      $this->quote = $row['quote'];
-      $this->author = $row['author'];
-      $this->category = $row['category'];
-
       return $stmt;
     }
 
@@ -182,14 +166,6 @@
 
       // Execute query
       $stmt->execute();
-
-      $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-      // Set properties
-      $this->id = $row['id'];
-      $this->quote = $row['quote'];
-      $this->author = $row['author'];
-      $this->category = $row['category'];
 
       return $stmt;
     }
