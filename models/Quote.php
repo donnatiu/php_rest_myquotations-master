@@ -103,8 +103,8 @@
       $stmt = $this->conn->prepare($query);
 
       // Bind ID
-      $stmt->bindParam(1, $this->authorId, PDO::PARAM_INT);
-      $stmt->bindParam(2, $this->categoryId, PDO::PARAM_INT);
+      $stmt->bindParam(1, $this->authorId);
+      $stmt->bindParam(2, $this->categoryId);
 
       // Execute query
       $stmt->execute();
