@@ -91,5 +91,9 @@ INSERT INTO `quotes` (`id`, `quote`, `authorId`, `categoryId`) VALUES
 (29, 'Squidward… I used your clarinet to unclog my toilet!', 14, 6),
 (30, 'The Krusty Krab pizza is the pizza for you and me.', 14, 6),
 (31, 'Hey Patrick, I thought of something funnier than 24… 25!', 14, 6),
-(32, 'Gun to my head? I''d say pull the trigger.', 5, 4);
+(32, 'Gun to my head? I''d say pull the trigger.', 5, 4),
+(33, 'Well, someone inherited her father''s flair for hyperbole.', 5, 4),
+(34, 'Why does everyone think I''m gay?', 5, 4),
+(35, 'Cam thinks that if he were straight he and Julia Roberts would be dating.', 5, 4),
+(36, 'I can''t go to jail. I''m a gay prosecutor, there''s no prison gangs for that!', 5, 4);
 
