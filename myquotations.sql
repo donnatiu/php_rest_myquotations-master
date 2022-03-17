@@ -59,7 +59,7 @@ INSERT INTO `categories` (`id`, `category`) VALUES
 (5, 'Parks and Rec'),
 (6, 'Knowledge-Learning'),
 (7, 'Honesty'),
-(8, 'Life')
+(8, 'Life'),
 (9, 'Travel');
 
 INSERT INTO `quotes` (`id`, `quote`, `authorId`, `categoryId`) VALUES
