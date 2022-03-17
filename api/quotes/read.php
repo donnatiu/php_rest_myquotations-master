@@ -7,7 +7,7 @@
   }
 
   // All quotes from specified authorId & categoryId
-  if((isset($_GET['authorId'])) && (isset($_GET['cateogryId']))) {
+  if((isset($_GET['authorId'])) && (isset($_GET['categoryId']))) {
     $quote->authorId = $_GET['authorId'];
     $quote->categoryId = $_GET['categoryId'];
     $result = $quote->read_given_both();
