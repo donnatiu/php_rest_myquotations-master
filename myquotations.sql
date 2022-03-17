@@ -57,7 +57,10 @@ INSERT INTO `categories` (`id`, `category`) VALUES
 (3, 'Friends'),
 (4, 'Very Chill'),
 (5, 'Parks and Rec'),
-(6, 'SpongeBob SquarePants');
+(6, 'Knowledge-Learning'),
+(7, 'Honesty'),
+(8, 'Life')
+(9, 'Travel');
 
 INSERT INTO `quotes` (`id`, `quote`, `authorId`, `categoryId`) VALUES
 (1, 'Pip-Pip-Da-Doodalydoo.', 1, 1),
@@ -91,9 +94,9 @@ INSERT INTO `quotes` (`id`, `quote`, `authorId`, `categoryId`) VALUES
 (29, 'Squidward… I used your clarinet to unclog my toilet!', 14, 6),
 (30, 'The Krusty Krab pizza is the pizza for you and me.', 14, 6),
 (31, 'Hey Patrick, I thought of something funnier than 24… 25!', 14, 6),
-(32, 'Sooner or later you are going to have to face the fact that you''re a moron.', 5, 4),
+(32, 'Sooner or later you are going to have to face the fact that you''re a moron.', 5, 7),
 (33, 'Obviously, you are not a golfer.', 5, 4),
-(34, 'I had a rough night and I hate the Eagles, man.', 5, 4),
+(34, 'I had a rough night and I hate the Eagles, man.', 5, 7),
 (35, 'Careful, man, there''s a beverage here.', 5, 4),
-(36, 'This aggression will not stand, man.', 5, 4);
+(36, 'This aggression will not stand, man.', 5, 8);
 
