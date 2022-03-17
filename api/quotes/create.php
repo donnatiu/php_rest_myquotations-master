@@ -5,17 +5,12 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  if ((!property_exists($data, 'authorId')) or (!property_exists($data, 'categoryId')) or (!property_exists($data, 'quote'))) {
+  if (!((isset($_GET['authorId'])) or (isset($_GET['authorId'])) or (isset($_GET['authorId'])))) {
     echo json_encode(
       array('message' => 'Missing Required Parameters')
     );
     exit();
   }
-
-  // Set quote to CREATE
-  $quote->quote = $data->quote;
-  $quote->authorId = $data->authorId;
-  $quote->categoryId = $data->categoryId;
 
   // Check if author exists
   $authorExists = isValid($data->authorId, $author);
@@ -31,15 +26,20 @@
   }
 
   // categoryId does not exist
-  elseif(!categoryExists()) {
+  if(!categoryExists()) {
     echo json_encode(
       array('message' => 'categoryId Not Found')
     );
     exit();
   }
 
+  // Set quote to CREATE
+  $quote->quote = $data->quote;
+  $quote->authorId = $data->authorId;
+  $quote->categoryId = $data->categoryId;
+
   // Create Quote
-  elseif($quote->create()) {
+  if($quote->create()) {
     $last_insert_id = $db->lastInsertId();
     echo json_encode(
       array(
