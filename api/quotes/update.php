@@ -55,7 +55,7 @@
     echo json_encode(
       array(
         'id' => $data->id,
-        'quote' = $data->quote,
+        'quote' => $data->quote,
         'authorId' => $data->authorId,
         'categoryId' => $data->categoryId
       )
