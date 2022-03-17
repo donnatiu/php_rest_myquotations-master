@@ -18,15 +18,16 @@
   $quote->categoryId = $data->categoryId;
 
   // Check if author exists
-  $authorExists = isValid($data->authorId, $quote);
+  $authorExists = isValid($data->authorId, $author);
   // Check if category exists
-  $categoryExists = isValid($data->categoryId, $quote);
+  $categoryExists = isValid($data->categoryId, $category);
   
   // authorId does not exist
   if(!authorExists()) {
     echo json_encode(
       array('message' => 'authorId Not Found')
     );
+    exit();
   }
 
   // categoryId does not exist
@@ -34,6 +35,7 @@
     echo json_encode(
       array('message' => 'categoryId Not Found')
     );
+    exit();
   }
 
   // Create Quote

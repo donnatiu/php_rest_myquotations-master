@@ -10,6 +10,8 @@
 
     include_once '../../config/Database.php';
     include_once '../../models/Quote.php';
+    include_once '../../models/Author.php';
+    include_once '../../models/Category.php';
 
     // Instantiate DB & connect
     $database = new Database();
@@ -17,6 +19,9 @@
 
     // Instantiate quote object
     $quote = new Quote($db);
+
+    $author = new Author($db);
+    $category = new Category($db);
 
     /* Use conditional logic of your choice to route the request to the appropriate file with 
     require_once() or include_once() */
