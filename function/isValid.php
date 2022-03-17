@@ -25,9 +25,14 @@ function isValid($id, $model) {
 
     // Get the result of $model read_single method
     $result = $model->read_single();
+    $num = $result->rowCount();
 
     // Return the result
-    return $result;
+    if($num > 0) {
+        return true;
+    }
+
+    return false;
 
 }
 
