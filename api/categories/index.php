@@ -9,13 +9,17 @@
     }
 
     include_once '../../config/Database.php';
+    include_once '../../models/Quote.php';
+    include_once '../../models/Author.php';
     include_once '../../models/Category.php';
 
     // Instantiate DB & connect
     $database = new Database();
     $db = $database->connect();
 
-    // Instantiate category object
+    // Instantiate each model
+    $quote = new Quote($db);
+    $author = new Author($db);
     $category = new Category($db);
 
     /* Use conditional logic of your choice to route the request to the appropriate file with 

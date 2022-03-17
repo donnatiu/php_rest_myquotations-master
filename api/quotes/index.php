@@ -17,9 +17,8 @@
     $database = new Database();
     $db = $database->connect();
 
-    // Instantiate quote object
+    // Instantiate each model
     $quote = new Quote($db);
-
     $author = new Author($db);
     $category = new Category($db);
 

@@ -5,16 +5,39 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  // Set ID to UPDATE
-  $quote->id = $data->id;
+  // If missing any parameters
+  if ((!isset($data->id)) or (!isset($data->authorId)) or (!isset($data->categoryId)) or (!isset($data->quote))) {
+    echo json_encode(
+      array('message' => 'Missing Required Parameters')
+    );
+    exit();
+  }
+
+  // Check if author exists
+  $authorExists = isValid($data->authorId, $author);
+  // Check if category exists
+  $categoryExists = isValid($data->categoryId, $category);
+  
+  // authorId does not exist
+  if($authorExists == false) {
+    echo json_encode(
+      array('message' => 'authorId Not Found')
+    );
+    exit();
+  }
+
+  // categoryId does not exist
+  if($categoryExists == false) {
+    echo json_encode(
+      array('message' => 'categoryId Not Found')
+    );
+    exit();
+  }
 
   // Set quote to UPDATE
+  $quote->id = $data->id;
   $quote->quote = $data->quote;
-
-  // Set authorId to UPDATE
   $quote->authorId = $data->authorId;
-
-  // Set categoryId to UPDATE
   $quote->categoryId = $data->categoryId;
 
   // Update author
@@ -28,35 +51,11 @@
       )
     );
   } 
-  
+
   else {
-
-    // Check if author exists
-    $authorExists = isValid($data->authorId, $quote);
-    // Check if category exists
-    $categoryExists = isValid($data->categoryId, $quote);
-
-    // If missing any parameters
-    if(empty($quote->authorId) or empty($quote->categoryId)) {
-      echo json_encode(
-        array('message' => 'Missing Required Parameters')
-      );
-    }
-
-    // authorId does not exist
-    elseif(!authorExists()) {
-      echo json_encode(
-        array('message' => 'authorId Not Found')
-      );
-    }
-
-    // categoryId does not exist
-    elseif(!categoryExists()) {
-      echo json_encode(
-        array('message' => 'categoryId Not Found')
-      );
-    }
-
+    echo json_encode(
+      array('message' => 'No Quotes Found')
+    );
   }
 
   exit();
