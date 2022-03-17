@@ -5,8 +5,7 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  /*
-  if ((!isset($_POST['authorId'])) or (!isset($_POST['categoryId'])) or (!isset($_POST['quote']))) {
+  if ((!isset($data->authorId)) or (!isset($data->categoryId)) or (!isset($data->quote))) {
     echo json_encode(
       array('message' => 'Missing Required Parameters')
     );
@@ -33,7 +32,6 @@
     );
     exit();
   }
-*/
 
   // Set quote to CREATE
   $quote->quote = $data->quote;
