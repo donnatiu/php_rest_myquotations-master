@@ -5,7 +5,7 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  if ((!(isset($_GET['authorId']))) or (!(isset($_GET['categoryId']))) or (!(isset($_GET['quote'])))) {
+  if ((!array_key_exists('authorId', $data)) or (!array_key_exists('categoryId', $data)) or (!array_key_exists('quote', $data))) {
     echo json_encode(
       array('message' => 'Missing Required Parameters')
     );
