@@ -20,7 +20,7 @@
   }
 
   // All quotes from specified categoryId
-  elseif(isset($_GET['cateogryId'])) {
+  elseif(isset($_GET['categoryId'])) {
     $quote->categoryId = $_GET['categoryId'];
     $result = $quote->read_given_category();
   }
