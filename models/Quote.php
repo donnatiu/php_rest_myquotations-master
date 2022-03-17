@@ -176,7 +176,6 @@
       $query = 'INSERT INTO ' . 
                   $this->table . ' 
                 SET 
-                  id = :id, 
                   quote = :quote, 
                   authorId = :authorId, 
                   categoryId = :categoryId';
@@ -185,13 +184,11 @@
       $stmt = $this->conn->prepare($query);
 
       // Clean data
-      $this->id = htmlspecialchars(strip_tags($this->id));
       $this->quote = htmlspecialchars(strip_tags($this->quote));
       $this->authorId = htmlspecialchars(strip_tags($this->authorId));
       $this->categoryId = htmlspecialchars(strip_tags($this->categoryId));
 
       // Bind data
-      $stmt->bindParam(':id', $this->id);
       $stmt->bindParam(':quote', $this->quote);
       $stmt->bindParam(':authorId', $this->authorId);
       $stmt->bindParam(':categoryId', $this->categoryId);

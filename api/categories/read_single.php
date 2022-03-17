@@ -14,7 +14,7 @@
     // Create array
     $category_arr = array(
       'id' => $category->id,
-      'author' => $category->author
+      'category' => $category->category
     );
 
     // Turn to JSON & output
