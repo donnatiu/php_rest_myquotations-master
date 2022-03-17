@@ -97,7 +97,7 @@
                 LEFT JOIN
                   categories c ON p.categoryId = c.id
                 WHERE
-                  p.authorId = ? AND p.categoryId = ?';
+                  (p.authorId = ? AND p.categoryId = ?)';
 
       // Prepare statement
       $stmt = $this->conn->prepare($query);
