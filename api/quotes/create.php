@@ -18,7 +18,7 @@
   $categoryExists = isValid($data->categoryId, $category);
   
   // authorId does not exist
-  if(!authorExists()) {
+  if(!$authorExists) {
     echo json_encode(
       array('message' => 'authorId Not Found')
     );
@@ -26,7 +26,7 @@
   }
 
   // categoryId does not exist
-  if(!categoryExists()) {
+  if(!$categoryExists) {
     echo json_encode(
       array('message' => 'categoryId Not Found')
     );
