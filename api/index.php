@@ -1,7 +1,7 @@
 <?php 
     $quote_num = filter_input(INPUT_GET, "quote_num", FILTER_SANITIZE_NUMBER_INT);
 
-    include_once '../../config/Database.php';
+    include_once '../config/Database.php';
 
     if ($quote) {
         $query = 'SELECT * FROM quotes WHERE id = :quote_num';
