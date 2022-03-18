@@ -4,13 +4,13 @@
     include_once '../../config/Database.php';
 
     if ($quote) {
-        $query = 'SELECT * FROM quotes WHERE id LIKE :quote_num ORDER BY id';
+        $query = 'SELECT * FROM quotes WHERE id = :quote_num';
 
         $database = new Database();
         $db = $database->connect();
 
         $statement = $db->prepare($query);
-        $statement->bindValue(':quote_num', "%" . $quote_num . "%");
+        $statement->bindValue(':quote_num', $quote_num);
         $statement->execute();
         //$statement->debugDumpParams();
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
