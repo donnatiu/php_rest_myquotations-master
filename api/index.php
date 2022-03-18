@@ -1,5 +1,5 @@
 <?php 
-    $quote_num = filter_input(INPUT_GET, "quote_num", FILTER_SANITIZE_STRING);
+    $quote_num = filter_input(INPUT_GET, "quote_num", FILTER_SANITIZE_NUMBER_INT);
 
     include_once '../../config/Database.php';
 
