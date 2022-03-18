@@ -34,7 +34,7 @@
     <section>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="GET">
             <h2 id="enter-a-quote_num">Enter a Quote Number (1 - 30):</h2>
-            <input type="text" id="quote_num" name="quote_num" aria-labelledby="enter-a-quote_num" required>
+            <input type="number" id="quote_num" name="quote_num" aria-labelledby="enter-a-quote_num" required>
             <button>Submit</button>
         </form>
     </section>
