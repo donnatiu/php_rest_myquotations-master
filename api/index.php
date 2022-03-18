@@ -10,7 +10,7 @@
         $db = $database->connect();
 
         $statement = $db->prepare($query);
-        $statement->bindValue(':quote_num', $quote_num);
+        $statement->bindValue(':quote_num', $quote_num, PDO::PARAM_INT);
         $statement->execute();
         //$statement->debugDumpParams();
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
