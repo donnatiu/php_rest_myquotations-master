@@ -54,6 +54,12 @@
       // Execute query
       $stmt->execute();
 
+      $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+      // set properties
+      $this->id = $row['id'];
+      $this->category = $row['category'];
+
       return $stmt;
     }
 
